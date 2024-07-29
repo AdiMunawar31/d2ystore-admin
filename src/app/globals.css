@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --main-blue: #27aae1;
+    --main-blue-lightest: #e9f7fc;
+
+    --neutral-grey-200-bg: #f6f8fc;
+    --neutral-grey-300-disable-btn: #e3e8f5;
+    --neutral-grey-400: #C5D0DF;
+    --neutral-grey-500-disable-text: #a7b8c9;
+    --neutral-grey-600-body-text: #667a8e;
+    --neutral-grey-900: #000f1f;
+
+    --background: #ffffff;
+    --foreground: #000f1f;
+
+    --card: #ffffff;
+    --card-foreground: #000f1f;
+
+    --popover: #ffffff;
+    --popover-foreground: #000f1f;
+
+    --active: #27aae1;
+    --active-foreground: #fafafa;
+
+    --primary: #27aae1;
+    --primary-lightest: #e9f7fc;
+    --primary-foreground: #ffffff;
+    --primary-lightest-foreground: #27aae1;
+
+    --secondary: #f5f5f5;
+    --secondary-foreground: #8e8e8e;
+
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+
+    --accent: #e9f7fc;
+    --accent-foreground: #27aae1;
+
+    --destructive: #f43f5e;
+    --destructive-foreground: #fafafa;
+    --destructive-lightest: #feecef;
+    --destructive-lightest-foreground: #f43f5e;
+
+    --success: #4fbc47;
+    --success-foreground: #fafafa;
+    --success-lightest: #edf8ed;
+    --success-lightest-foreground: #4fbc47;
+
+    --warning: #f59e0b;
+    --warning-foreground: #fafafa;
+    --warning-lightest: #fef5e7;
+    --warning-lightest-foreground: #f59e0b;
+
+    --pink: #ff01e6;
+    --pink-foreground: #fafafa;
+    --pink-lightest: #FBE3FF;
+    --pink-lightest-foreground: #ff01e6;
+
+    --purple: #9747FF;
+    --purple-foreground: #fafafa;
+    --purple-lightest: #EFE3FF;
+    --purple-lightest-foreground: #9747FF;
+
+    --border: #e3e8f5;
+    --input: #e5e5e5;
+    --ring: #e3e8f5;
+    --placeholder: #a7b8c9;
+
+    --radius: 0.5rem;
+    --sidebar-width: 17rem;
+    --header-height: 4.25rem;
+  }
+
+  .dark {
+    --background: #000f1f;
+    --foreground: #fafafa;
+
+    --card: #000f1f;
+    --card-foreground: #fafafa;
+
+    --popover: #000f1f;
+    --popover-foreground: #fafafa;
+
+    --active: #27aae1;
+    --active-foreground: #fafafa;
+
+    --primary: #000f1f;
+    --primary-foreground: #fafafa;
+
+    --secondary: #262626;
+    --secondary-foreground: #fafafa;
+
+    --muted: #262626;
+    --muted-foreground: #a3a3a3;
+
+    --accent: #262626;
+    --accent-foreground: #fafafa;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #fafafa;
+
+    --border: #262626;
+    --input: #262626;
+    --ring: #e3e8f5;
+    --placeholder: #262626;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground min-h-screen;
+  }
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  @apply text-lg 
+}
+
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Warna background track */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #99d1ff; /* Warna scrollbar */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; /* Warna border, menyesuaikan dengan track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #408ec6; /* Warna scrollbar saat di-hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #bbe0ff #f1f1f1;
+}

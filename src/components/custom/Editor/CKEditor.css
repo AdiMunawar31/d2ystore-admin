@@ -1,0 +1,58 @@
+.ck-toolbar {
+  z-index: 1;
+}
+
+.ck.ck-toolbar {
+  background: #fff !important;
+  padding: 6px 15px !important;
+}
+.ck.ck-toolbar.ck-rounded-corners {
+  border-radius: 5px 5px 0 0 !important;
+}
+.ck.ck-icon * {
+  color: #000 !important;
+}
+.ck.ck-button:not(.ck-disabled):hover,
+a.ck.ck-button:not(.ck-disabled):hover,
+.ck.ck-button.ck-on,
+a.ck.ck-button.ck-on {
+  background: #a0b5bc !important;
+}
+
+.ck.ck-toolbar__separator {
+  align-self: center !important;
+  padding-top: 23px !important;
+  width: 2px !important;
+  margin-right: 10px !important;
+}
+
+.ck.ck-icon.ck-button__icon {
+  position: absolute !important;
+  width: 15px;
+  height: 15px;
+}
+
+.ck.ck-button {
+  align-content: center !important;
+  display: flex !important;
+  align-self: center !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 20px !important;
+  position: relative !important;
+  height: 20px !important;
+  min-height: 5px !important;
+  min-width: 5px !important;
+  margin-right: 10px !important;
+}
+
+.ck.ck-content {
+  padding: 0px 32px;
+  height: 250px;
+  border: #e5e5e5 1px solid !important;
+  background: #fff !important;
+}
+
+.ck.ck-editor__editable > .ck-placeholder::before {
+  color: #bfbfbf;
+}

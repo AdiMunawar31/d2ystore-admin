@@ -1,0 +1,135 @@
+import type { ApiResponseInterface } from "../interfaces/api"
+import type { DetailDraftEmployeeInterface, EmployeesInterface } from "../interfaces/menu/target-management/employees"
+
+const dummyEmployeesData: EmployeesInterface[] = [
+  {
+    branches: [
+      { code: "BR001", id: "B001", name: "Branch A" },
+      { code: "BR002", id: "B002", name: "Branch B" },
+    ],
+    employee_id: "E001",
+    employee_number: "EMP001X",
+    createdAt: new Date(),
+    createdBy: new Date(),
+    deletedAt: new Date(),
+    deletedBy: new Date(),
+    company: { id: "C001", name: "Tech Corp", code: "TC", external_id: "EXT001" },
+    department: { id: "D001", name: "R&D" },
+    email: "employee1@techcorp.com",
+    employee_status: "Full-Time",
+    external_code: "EX001",
+    id: "E001",
+    job_position: { id: "JP001", name: "Engineer", inherit: "Senior Engineer" },
+    join_date: "2021-01-01",
+    name: "John Doess",
+    phone_number: "1234567890",
+    photo: "https://example.com/photos/johndoe.png",
+    resign_date: "2023-01-01",
+    identity_number: "ID123456789",
+    status: "active",
+    tax_number: "TN123456",
+    title: "Mr.",
+    updatedAt: new Date(),
+    updatedBy: new Date(),
+    salesman_division: [{ code: "SD001", id: "S001", name: "Division A" }],
+    sso_id: 123456,
+  },
+  {
+    branches: [
+      { code: "BR001", id: "B001", name: "Branch A" },
+      { code: "BR002", id: "B002", name: "Branch B" },
+    ],
+    employee_id: "E002",
+    employee_number: "EMP002X",
+    createdAt: new Date(),
+    createdBy: new Date(),
+    deletedAt: new Date(),
+    deletedBy: new Date(),
+    company: { id: "C001", name: "Tech Corp", code: "TC", external_id: "EXT001" },
+    department: { id: "D001", name: "R&D" },
+    email: "employee1@techcorp.com",
+    employee_status: "Full-Time",
+    external_code: "EX002",
+    id: "E002",
+    job_position: { id: "JP001", name: "Engineer", inherit: "Senior Engineer" },
+    join_date: "2021-01-01",
+    name: "Fanny",
+    phone_number: "1234567890",
+    photo: "https://example.com/photos/johndoe.png",
+    resign_date: "2023-01-01",
+    identity_number: "ID123456789",
+    status: "active",
+    tax_number: "TN123456",
+    title: "Mr.",
+    updatedAt: new Date(),
+    updatedBy: new Date(),
+    salesman_division: [{ code: "SD001", id: "S001", name: "Division A" }],
+    sso_id: 123456,
+  },
+  // Add more employee objects as needed
+]
+
+const dummyDetailDraftEmployeeData: DetailDraftEmployeeInterface = {
+  branches: [
+    { code: "BR001", id: "B001", name: "Branch A" },
+    { code: "BR002", id: "B002", name: "Branch B" },
+  ],
+  employee_id: "E001",
+  employee_number: "EMP001",
+  department: { id: "D001", name: "R&D" },
+  company: { id: "C001", name: "Tech Corp", code: "TC", external_id: "EXT001" },
+  email: "employee1@techcorp.com",
+  employee_status: "Full-Time",
+  external_code: "EX001",
+  id: "E001",
+  job_position: { id: "JP001", name: "Engineer", inherit: "Senior Engineer" },
+  join_date: "2021-01-01",
+  name: "John Doe",
+  phone_number: "1234567890",
+  photo: "https://example.com/photos/johndoe.png",
+  resign_date: new Date(),
+  identity_number: "ID123456789",
+  status: "active",
+  tax_number: "TN123456",
+  title: "Mr.",
+  salesman_division: [{ code: "SD001", id: "S001", name: "Division A" }],
+  sso_id: 123456,
+}
+
+// Dummy ApiResponse for Employees
+export const employeesApiResponse: ApiResponseInterface<EmployeesInterface[]> = {
+  data: dummyEmployeesData,
+  message: "Employees fetched successfully",
+  status: 200,
+  meta: {
+    total: dummyEmployeesData.length,
+    limit: 10,
+    page: 1,
+    total_page: 1,
+  },
+  pagination: {
+    total: dummyEmployeesData.length,
+    limit: 10,
+    current_page: 1,
+    last_page: 1,
+  },
+}
+
+// Dummy ApiResponse for DetailDraftEmployee
+export const detailDraftEmployeeApiResponse: ApiResponseInterface<DetailDraftEmployeeInterface> = {
+  data: dummyDetailDraftEmployeeData,
+  message: "Detail draft employee fetched successfully",
+  status: 200,
+  meta: {
+    total: 1,
+    limit: 1,
+    page: 1,
+    total_page: 1,
+  },
+  pagination: {
+    total: 1,
+    limit: 1,
+    current_page: 1,
+    last_page: 1,
+  },
+}

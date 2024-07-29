@@ -1,4 +1,20 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+})
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "standalone",
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "ui-avatars.com",
+      },
+    ],
+  },
+  reactStrictMode: false,
+}
+
+module.exports = withBundleAnalyzer(nextConfig)

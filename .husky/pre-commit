@@ -1,0 +1,9 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+echo "[husky] - 💅 Run linter"
+yarn lint
+
+echo "[husky] - 🧪 Run type check"
+yarn type:check
