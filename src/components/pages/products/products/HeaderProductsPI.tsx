@@ -3,14 +3,15 @@
 import { useMemo, useState } from "react"
 import { LayoutGrid, Menu } from "lucide-react"
 import Link from "next/link"
-// import { toast } from "sonner"
 import { useDebounceValue } from "usehooks-ts"
+// import { toast } from "sonner"
 import usePIInfiniteProductCategoryList from "@/api/products/product-category/usePIInfiniteProductCategoryList"
 import usePIInfiniteProductTypeList from "@/api/products/product-type/usePIInfiniteProductTypeList"
 import CustomHeader from "@/components/custom/Header"
 import { Button } from "@/components/ui/button"
 import type { SelectType } from "@/lib/types/select"
 import { useProductsPIContext } from "@/providers/products/products/ProductsPIProvider"
+import BulkUploadProducts from "./BulkUploadTargetManagement"
 
 const HeaderProductsPI = (props: any) => {
   // const queryClient = useQueryClient()
@@ -117,6 +118,10 @@ const HeaderProductsPI = (props: any) => {
       onPageMetaApiChange={setPageListProducts}
       onConfirmDelete={async () => {}}
       listActions={[
+        {
+          label: <BulkUploadProducts />,
+          asChild: true,
+        },
         {
           label: <Link href={"/products/products/add"}>Add New</Link>,
           variant: "primary",
